@@ -1,10 +1,11 @@
+// next.config.mjs
 import bundleAnalyzer from '@next/bundle-analyzer';
 
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
-export default withBundleAnalyzer({
+const nextConfig = {
   reactStrictMode: false,
   eslint: {
     ignoreDuringBuilds: true,
@@ -12,4 +13,9 @@ export default withBundleAnalyzer({
   experimental: {
     optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
   },
-});
+};
+
+export default {
+  ...withBundleAnalyzer(nextConfig),
+  output: "export",  // <=== enables static exports
+};
