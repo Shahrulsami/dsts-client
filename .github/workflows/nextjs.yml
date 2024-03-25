@@ -79,8 +79,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
-      - name: server the site
-        run:  npx serve@latest out
 
   # Deployment job
   deploy:
