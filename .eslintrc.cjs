@@ -13,5 +13,8 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 'off',
     'import/extensions': 'off',
+    "linebreak-style": ["error", "windows"],
+    "eqeqeq": "off",
+    "no-unused-expressions": "off"
   },
 };

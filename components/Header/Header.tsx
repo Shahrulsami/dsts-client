@@ -31,6 +31,7 @@ import {
     IconChevronDown,
   } from '@tabler/icons-react';
   import classes from './Header.module.css';
+import ThemeSwitch from '../ThemeSwitch/ThemeSwitch';
 
   const mockdata = [
     {
@@ -147,6 +148,7 @@ export function Header() {
             </Group>
 
             <Group visibleFrom="sm">
+              <ThemeSwitch />
               <Button variant="default">Log in</Button>
               <Button>Sign up</Button>
             </Group>
@@ -190,6 +192,7 @@ export function Header() {
             </a>
             <Divider my="sm" />
             <Group justify="center" grow pb="xl" px="md">
+              <ThemeSwitch />
               <Button variant="default">Log in</Button>
               <Button>Sign up</Button>
             </Group>
